@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Montserrat-Bold.ttf">
+            <string>Montserrat-Bold</string>
+        </array>
+        <array key="Montserrat-Regular.ttf">
+            <string>Montserrat-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CommentTableViewCell" rowHeight="191" id="KGk-i7-Jjw" customClass="CommentTableViewCell" customModule="KitchenLogs" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="191"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="190.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6QH-wG-0hh">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="190.5"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="COMMENTS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lcB-OM-Tbm">
+                                <rect key="frame" x="19" y="46" width="97.5" height="20"/>
+                                <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="16"/>
+                                <color key="textColor" red="0.1019607843" green="0.68235294120000001" blue="0.53333333329999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" tag="20" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Leave a comment" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NIJ-zy-Tz8">
+                                <rect key="frame" x="22" y="89" width="276" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="32" id="2DN-in-Ewx"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="16"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="KGk-i7-Jjw" id="8OI-BS-aUT"/>
+                                </connections>
+                            </textField>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="txg-wj-dg2">
+                                <rect key="frame" x="22" y="121" width="276" height="1"/>
+                                <color key="backgroundColor" red="0.1529411765" green="0.14901960780000001" blue="0.14901960780000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="Tja-L2-rF8"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="txg-wj-dg2" firstAttribute="leading" secondItem="6QH-wG-0hh" secondAttribute="leading" constant="22" id="1W3-nq-NMJ"/>
+                            <constraint firstItem="lcB-OM-Tbm" firstAttribute="leading" secondItem="6QH-wG-0hh" secondAttribute="leading" constant="19" id="D1b-v9-laE"/>
+                            <constraint firstItem="lcB-OM-Tbm" firstAttribute="top" secondItem="6QH-wG-0hh" secondAttribute="top" constant="46" id="IiM-gl-e4D"/>
+                            <constraint firstItem="NIJ-zy-Tz8" firstAttribute="top" secondItem="lcB-OM-Tbm" secondAttribute="bottom" constant="23" id="Iuj-oW-n4B"/>
+                            <constraint firstAttribute="trailing" secondItem="txg-wj-dg2" secondAttribute="trailing" constant="22" id="KpS-In-P9s"/>
+                            <constraint firstItem="txg-wj-dg2" firstAttribute="top" secondItem="NIJ-zy-Tz8" secondAttribute="bottom" id="SQo-xE-Gk2"/>
+                            <constraint firstItem="NIJ-zy-Tz8" firstAttribute="leading" secondItem="6QH-wG-0hh" secondAttribute="leading" constant="22" id="UDn-WH-ljB"/>
+                            <constraint firstAttribute="trailing" secondItem="NIJ-zy-Tz8" secondAttribute="trailing" constant="22" id="kcg-tv-hqt"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="6QH-wG-0hh" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="8Ns-4X-yFn"/>
+                    <constraint firstAttribute="bottom" secondItem="6QH-wG-0hh" secondAttribute="bottom" id="IoZ-k0-hg6"/>
+                    <constraint firstItem="6QH-wG-0hh" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="TSo-GQ-AVc"/>
+                    <constraint firstAttribute="trailing" secondItem="6QH-wG-0hh" secondAttribute="trailing" id="wLQ-lX-1KC"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="myLabel" destination="lcB-OM-Tbm" id="2uf-JI-fHd"/>
+                <outlet property="myTextField" destination="NIJ-zy-Tz8" id="PWm-5i-974"/>
+            </connections>
+            <point key="canvasLocation" x="39" y="127.5"/>
+        </tableViewCell>
+    </objects>
+</document>

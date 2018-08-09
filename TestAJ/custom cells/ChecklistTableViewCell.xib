@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Montserrat-Light.ttf">
+            <string>Montserrat-Light</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ChecklistTableViewCell" rowHeight="92" id="KGk-i7-Jjw" customClass="ChecklistTableViewCell" customModule="KitchenLogs" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="92"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="91.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Seating arrangement has been done as required " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w8e-Fz-bjc">
+                        <rect key="frame" x="64" y="29" width="188" height="34.5"/>
+                        <fontDescription key="fontDescription" name="Montserrat-Light" family="Montserrat" pointSize="14"/>
+                        <color key="textColor" red="0.1529411765" green="0.14901960780000001" blue="0.14901960780000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yDG-GN-pfs">
+                        <rect key="frame" x="0.0" y="90.5" width="320" height="1"/>
+                        <color key="backgroundColor" red="0.85490196080000003" green="0.86274509799999999" blue="0.86666666670000003" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="w0Z-92-NEW"/>
+                        </constraints>
+                    </view>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AsF-Md-tqP">
+                        <rect key="frame" x="5" y="26" width="40" height="40"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="40" id="8BB-UO-G1X"/>
+                            <constraint firstAttribute="height" constant="40" id="sc0-BA-uYQ"/>
+                        </constraints>
+                        <state key="normal" image="androidRadioButtonOn"/>
+                        <connections>
+                            <action selector="radioButtonClicked:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="AKO-A2-iXy"/>
+                        </connections>
+                    </button>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icons8NotApplicable80" translatesAutoresizingMaskIntoConstraints="NO" id="yk2-dR-qxY">
+                        <rect key="frame" x="13" y="34" width="24" height="24"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="24" id="dkh-Ik-acQ"/>
+                            <constraint firstAttribute="height" constant="24" id="usn-bp-Fmd"/>
+                        </constraints>
+                    </imageView>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J96-4C-Iei">
+                        <rect key="frame" x="272" y="25" width="40" height="40"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="40" id="39C-1v-PQi"/>
+                            <constraint firstAttribute="height" constant="40" id="N38-Xr-bVc"/>
+                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="l5N-sh-Fie"/>
+                        </constraints>
+                        <state key="normal" image="iosCloseOutline"/>
+                        <connections>
+                            <action selector="crossButtonClicked:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="O5r-gB-yBO"/>
+                        </connections>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="w8e-Fz-bjc" firstAttribute="leading" secondItem="AsF-Md-tqP" secondAttribute="trailing" constant="19" id="8dl-3m-pcY"/>
+                    <constraint firstItem="yk2-dR-qxY" firstAttribute="centerY" secondItem="AsF-Md-tqP" secondAttribute="centerY" id="FYW-WL-286"/>
+                    <constraint firstItem="yDG-GN-pfs" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="Xf1-uj-Nrp"/>
+                    <constraint firstAttribute="bottom" secondItem="yDG-GN-pfs" secondAttribute="bottom" id="ac7-iF-wyw"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="J96-4C-Iei" secondAttribute="trailing" id="dJw-eZ-Swf"/>
+                    <constraint firstItem="yk2-dR-qxY" firstAttribute="centerX" secondItem="AsF-Md-tqP" secondAttribute="centerX" id="frM-uD-yz4"/>
+                    <constraint firstItem="J96-4C-Iei" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="gkq-fa-DlX"/>
+                    <constraint firstAttribute="trailing" secondItem="yDG-GN-pfs" secondAttribute="trailing" id="hW9-kU-yFD"/>
+                    <constraint firstItem="AsF-Md-tqP" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="rFp-a8-ude"/>
+                    <constraint firstAttribute="trailing" secondItem="w8e-Fz-bjc" secondAttribute="trailing" constant="68" id="uxZ-Sr-TOB"/>
+                    <constraint firstItem="AsF-Md-tqP" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="5" id="xjE-bM-Wpl"/>
+                    <constraint firstItem="w8e-Fz-bjc" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="zTj-6Y-XiQ"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="crossButton" destination="J96-4C-Iei" id="5XR-Lg-P25"/>
+                <outlet property="nnaImageView" destination="yk2-dR-qxY" id="88n-eB-Xqk"/>
+                <outlet property="radioButton" destination="AsF-Md-tqP" id="Phu-CS-6rY"/>
+                <outlet property="titleLabel" destination="w8e-Fz-bjc" id="meo-cu-U7h"/>
+            </connections>
+            <point key="canvasLocation" x="34" y="78"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="androidRadioButtonOn" width="20" height="20"/>
+        <image name="icons8NotApplicable80" width="24" height="24"/>
+        <image name="iosCloseOutline" width="21" height="20"/>
+    </resources>
+</document>

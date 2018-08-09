@@ -1,0 +1,6 @@
+framework module Pods_KitchenLogsUITests {
+  umbrella header "Pods-KitchenLogsUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
